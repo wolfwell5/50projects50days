@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    /*todo 这个是干啥的, 没看太懂？
+       https://www.w3school.com.cn/cssref/pr_box-sizing.asp
+   */
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* 和flex-direction 搭配使用，居中或者end*/
+    justify-content: center;
+    /* 和flex， 横向居中 */
+    align-items: center;
+    /* 调节上下视图， 使上下居中*/
+    height: 100vh;
+    /* 隐藏超出元素,
+    https://www.w3school.com.cn/cssref/pr_overflow-x.asp
+    进阶  清除浮动 https://www.cnblogs.com/694579350liuq/p/7097829.html
+    */
+    overflow: hidden;
+    /*todo 上 左右都看到了有几个 px， 加上 margin=0 后去除   为啥？ */
+    margin: 0;
+}
+
+button {
+    background-color: purple;
+    color: #fff;
+    border: 1px purple solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+button:focus {
+    /* inspect 样式的 :hov，勾选 :focus 属性，来显示*/
+    outline: none;
+}
+
+
+button .circle {
+    position: absolute;
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    /* ease out 几个区别
+    https://www.w3school.com.cn/cssref/pr_animation-timing-function.asp
+
+    进阶   ease 和 ease-in-out 区别：https://www.bilibili.com/read/cv11269464/
+    */
+    animation: scale 0.5s ease-out;
+}
+
+/*上面的 animation会调用这里*/
+/* keyframes  百分比的例子不错
+https://www.w3school.com.cn/cssref/pr_keyframes.asp
+*/
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+
+/*css 被画了横线删除 https://zhidao.baidu.com/question/545154963.html*/
