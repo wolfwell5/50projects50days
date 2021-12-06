@@ -8,7 +8,7 @@ btn.addEventListener('click', function (e) {
     const clientY = e.clientY;
 
     console.log(clientX, clientY);
-    // todo offsetTop detail
+    //  offsetTop detail
     // 按钮所在位置
     const buttonLeft = e.target.offsetLeft
     const buttonTop = e.target.offsetTop

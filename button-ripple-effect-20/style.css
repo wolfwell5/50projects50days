@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
-    /*todo 这个是干啥的, 没看太懂？
+    /*todo 可以再了解下， 大致意思就是计算 盒子模型是否计算 边框啥的
        https://www.w3school.com.cn/cssref/pr_box-sizing.asp
    */
     box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     /* 和flex-direction 搭配使用，居中或者end*/
     justify-content: center;
-    /* 和flex， 横向居中 */
+    /* 和flex， 横向居中  副轴！ */
     align-items: center;
     /* 调节上下视图， 使上下居中*/
     height: 100vh;
@@ -24,8 +24,9 @@ body {
     进阶  清除浮动 https://www.cnblogs.com/694579350liuq/p/7097829.html
     */
     overflow: hidden;
-    /*todo 上 左右都看到了有几个 px， 加上 margin=0 后去除   为啥？ */
-    margin: 0;
+    /*  上 左右都看到了有几个 px， 加上 margin=0 后去除
+    默认会有个棕色边框  */
+    /*margin: 0;*/
 }
 
 button {
@@ -73,4 +74,4 @@ https://www.w3school.com.cn/cssref/pr_keyframes.asp
 }
 
 
-/*css 被画了横线删除 https://zhidao.baidu.com/question/545154963.html*/
+/* 浏览器中css 被画了横线删除，意思被覆盖或没生效etc https://zhidao.baidu.com/question/545154963.html*/
